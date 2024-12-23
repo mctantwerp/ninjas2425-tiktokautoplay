@@ -1,24 +1,17 @@
 {
-    "manifest_version": 3,
-    "name": "TikTok Background Play",
-    "version": "1.0",
-    "description": "Keeps TikTok videos playing even when switching tabs",
-    "permissions": [
-      "tabs",
-      "activeTab",
-      "storage",
-      "scripting"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://*.tiktok.com/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "host_permissions": [
-      "https://www.tiktok.com/*"
-    ]
-  }  
+  "manifest_version": 3,
+  "name": "TikTok Background Play",
+  "version": "1.0",
+  "description": "Keeps TikTok videos playing even when switching tabs",
+  "permissions": ["tabs", "activeTab", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.tiktok.com/*", "https://www.tiktok.com/@*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["https://www.tiktok.com/*"]
+}
