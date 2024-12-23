@@ -41,4 +41,4 @@ This extension is unofficial and not associated with TikTok. It is created solel
 
 ## Authors ✍️
 
-- **[Gilles Serrien]** - [LinkedIn]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/gillesserrien/)) | Discord: `kingykongiee`
+- **[Gilles Serrien]** - [LinkedIn](https://www.linkedin.com/in/gillesserrien/) | Discord: `kingykongiee`
