@@ -3,6 +3,12 @@
   "name": "TikTok Background Play",
   "version": "1.0",
   "description": "Keeps TikTok videos playing even when switching tabs",
+  "icons": {
+    "16": "icons/16x16.png",
+    "32": "icons/32x32.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
   "permissions": ["tabs", "activeTab", "storage", "scripting"],
   "background": {
     "service_worker": "background.js"
