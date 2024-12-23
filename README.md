@@ -13,7 +13,8 @@ A Chrome extension that allows TikTok to continue playing even when you switch t
 2. Open Chrome and navigate to `chrome://extensions/`. 🔧
 3. Enable **Developer Mode** by toggling the switch in the top right. ⚙️
 4. Click on **Load unpacked** and select the folder where you downloaded or cloned this repository. 📂
-5. The extension should now be installed, and TikTok should continue playing in the background. 🎉
+5. The extension should now be installed, but first open the extension and enable the autoplay option.
+6. Done! TikTok should continue playing in the background. 🎉
 
 ## Usage 📱
 
