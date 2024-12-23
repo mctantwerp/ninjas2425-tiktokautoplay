@@ -13,5 +13,12 @@
       "js": ["content.js"]
     }
   ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "48": "icons/32x32.png"
+    }
+  },
   "host_permissions": ["https://www.tiktok.com/*"]
 }
