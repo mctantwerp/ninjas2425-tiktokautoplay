@@ -1,6 +1,7 @@
 let video;
 let index = 0;
-let scrollContainer = document.querySelector('.css-1xzh9re-DivColumnListContainer.e108hwin0');
+let scrollContainer = document.querySelector('.css-ldiizi-DivColumnListContainer.e108hwin0');
+
 let extensionEnabled;
 chrome.storage.sync.get(['autoplayEnabled'], (result) => {
     extensionEnabled = result.autoplayEnabled || false;
