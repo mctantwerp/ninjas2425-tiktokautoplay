@@ -1,12 +1,11 @@
 let video;
 let index = 0;
 let scrollContainer = document.querySelector('.css-ldiizi-DivColumnListContainer.e108hwin0');
-
+let debounceTimer;
 let extensionEnabled;
 chrome.storage.sync.get(['autoplayEnabled'], (result) => {
     extensionEnabled = result.autoplayEnabled || false;
 });
-console.log('hi from content.js');
 
 document.addEventListener('visibilitychange', async function () {
     if (extensionEnabled) {
@@ -16,32 +15,28 @@ document.addEventListener('visibilitychange', async function () {
             video.play();
         }
     }
-
 });
 
-scrollContainer.addEventListener('scroll', async function () {
-    if (extensionEnabled) {
-        if (video && !video.paused) {
-            video.pause();
-        }
-
-        if (index < 1) {
-            index++;
-        }
-        await delay(1000);
-        video = document.querySelectorAll('video')[index];
-        console.log(index);
-
-        if (video.paused) {
-            video.play();
-        }
-    }
-    else {
-        if (index < 1) {
-            index++;
-        }
-    }
-});
+// scrollContainer.addEventListener('scroll', function () {
+//     if (extensionEnabled) {
+//         // Debounce the scroll event
+//         clearTimeout(debounceTimer);
+//         debounceTimer = setTimeout(async () => {
+//             if (video && !video.paused) {
+//                 video.pause();
+//             }
+//             index++;
+//             video = document.querySelectorAll('video')[index];
+//             if (video && video.paused) {
+//                 video.play();
+//             }
+//         }, 100); // Adjust the delay (200ms) as needed
+//     } else {
+//         if (index < 1) {
+//             index++;
+//         }
+//     }
+// });
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
